@@ -11,5 +11,8 @@ const FeedbackItem = ({items}) => {
     </div>
   );
 };
+FeedbackItem.propTypes = {
+  items: PropTypes.object.isRequired,
+}
 
 export default FeedbackItem;
