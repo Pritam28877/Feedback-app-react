@@ -1,11 +1,28 @@
-import React from "react";
-const Card = ({ children }) => {
-  console.log(children);
-  if (!children) {
-    return <div className="card">nothings</div>;
-  }
-  console.log(children);
-  return <div className="card">{children}</div>;
-};
+import PropTypes from 'prop-types'
 
-export default Card;
+function Card({ children, reverse }) {
+  // return <div className={`card ${reverse && 'reverse'}`}>{children}</div>
+
+  return (
+    <div
+      className='card'
+      style={{
+        backgroundColor: reverse ? 'rgba(0,0,0,0.4)' : '#fff',
+        color: reverse ? '#fff' : '#000',
+      }}
+    >
+      {children}
+    </div>
+  )
+}
+
+Card.defaultProps = {
+  reverse: false,
+}
+
+Card.propTypes = {
+  children: PropTypes.node.isRequired,
+  reverse: PropTypes.bool,
+}
+
+export default Card

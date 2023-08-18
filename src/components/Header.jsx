@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 const Header = ({ text, bgColor, textColor }) => {
   const headerStyle = {
     backgroundColor: bgColor,
@@ -15,6 +13,4 @@ const Header = ({ text, bgColor, textColor }) => {
     </>
   );
 };
-
-
 export default Header;
