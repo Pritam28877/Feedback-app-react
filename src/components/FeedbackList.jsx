@@ -1,7 +1,7 @@
 import FeedbackItem from "./FeedbackItem";
 
 const FeedbackList = ({ feedback }) => {
-  console.log(feedback);
+  //   console.log(feedback);
   if (!feedback || feedback.length === 0) {
     return (
       <>
@@ -9,11 +9,12 @@ const FeedbackList = ({ feedback }) => {
       </>
     );
   }
-  return (<div className="feedback-list">
-    {feedback.map((items , index )=>(
-        <FeedbackItem key={items.id} items={items}/>
-    ))}
-  </div>);
-  
+  return (
+    <div className="feedback-list">
+      {feedback.map((items, index) => (
+        <FeedbackItem key={items.id} items={items} />
+      ))}
+    </div>
+  );
 };
 export default FeedbackList;
