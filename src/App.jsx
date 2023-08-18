@@ -1,13 +1,11 @@
-// import { useState } from "react";
-
 import "./App.css";
+import FeedbackItem from "./companent/FeedbackItem";
 import Header from "./companent/Header";
 function App() {
-  // const [count, setCount] = useState(0);
-
   return (
     <>
-      <Header  />
+      <Header />
+      <FeedbackItem />
     </>
   );
 }
