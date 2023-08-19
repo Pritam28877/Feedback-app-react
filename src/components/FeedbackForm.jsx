@@ -25,7 +25,7 @@ const FeedbackForm = () => {
   };
   return (
     <Card>
-      <RatingSelect />
+      <RatingSelect select={(rating) => setRating(rating)} />
       <form>
         <h2>How would you rate your service with us ?</h2>
         <div className="input-group">
