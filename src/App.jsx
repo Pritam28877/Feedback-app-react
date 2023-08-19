@@ -5,6 +5,7 @@ import FeedbackList from "./components/FeedbackList";
 import Header from "./components/Header";
 import { FeedbackData } from "./data/FeedbackData";
 import FeedbackForm from "./components/FeedbackForm";
+import { FeedbackProvider } from "./context/FeedbackContext";
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -19,9 +20,15 @@ function App() {
   };
   return (
     <>
-      <Header text="Feedback From" bgColor="rgba(0,0,0,0.6)" textColor="#fff" />
-      <FeedbackForm handleAdd={addFeedback} />
-      <FeedbackList feedback={feedback} deleteFeedback={deleteFeedback} />
+      <FeedbackProvider>
+        <Header
+          text="Feedback From"
+          bgColor="rgba(0,0,0,0.6)"
+          textColor="#fff"
+        />
+        <FeedbackForm handleAdd={addFeedback} />
+        <FeedbackList feedback={feedback} deleteFeedback={deleteFeedback} />
+      </FeedbackProvider>
     </>
   );
 }
