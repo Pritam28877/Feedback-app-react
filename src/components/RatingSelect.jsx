@@ -19,7 +19,6 @@ const RatingSelect = ({ select }) => {
         />
         <label htmlFor="num1">1</label>
       </li>
-
       <li>
         <input
           type="radio"
