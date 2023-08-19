@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Card from "./shared/card";
 import Button from "./shared/Buton";
+import RatingSelect from "./RatingSelect";
 
 const FeedbackForm = () => {
   const [text, settext] = useState("");
+  const [rating, setRating] = useState(10);
   const [btnDisable, setBtnDisable] = useState(true);
   const [message, setMessage] = useState("");
 
@@ -23,6 +25,7 @@ const FeedbackForm = () => {
   };
   return (
     <Card>
+      <RatingSelect />
       <form>
         <h2>How would you rate your service with us ?</h2>
         <div className="input-group">
